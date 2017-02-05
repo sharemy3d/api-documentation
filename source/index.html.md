@@ -59,7 +59,7 @@ HTTP Status Code | Meaning
 ## Upload new model
 
 ```shell
-curl "http://localhost:4000/api/v1/models/upload" \
+curl "https://api.sharemy3d.com/v1/models/upload" \
   -H "Authorization: 003b3c2c582348b084394435b1c4e39a" \
   -H "Content-Type: application/json" \
   -X POST \
@@ -93,7 +93,7 @@ This endpoint creates a new model.
 
 ### HTTP Request
 
-`POST http://localhost:4000/api/v1/models/upload`
+`POST https://api.sharemy3d.com/v1/models/upload`
 
 ### Arguments
 
@@ -110,7 +110,7 @@ resumable | false | no | If the model file should be uploaded by chunks (enables
 ## Retrieve a model
 
 ```shell
-curl "http://localhost:4000/api/v1/models/9e4d36b157df466da6dd9d32956561e1/info" \
+curl "https://api.sharemy3d.com/v1/models/9e4d36b157df466da6dd9d32956561e1/info" \
   -H "Authorization: 003b3c2c582348b084394435b1c4e39a"
 ```
 
@@ -135,7 +135,7 @@ This endpoint retrieves information about a model.
 
 ### HTTP Request
 
-`GET http://localhost:4000/api/v1/models/:modelId/info`
+`GET https://api.sharemy3d.com/v1/models/:modelId/info`
 
 ### Attributes
 Attribute | Type | Description
@@ -153,7 +153,7 @@ numViews | number | Number of model views.
 ## List all models
 
 ```shell
-curl "http://localhost:4000/api/v1/models?limit=3&offset=6&sort=-name" \
+curl "https://api.sharemy3d.com/v1/models?limit=3&offset=6&sort=-name" \
   -H "Authorization: 003b3c2c582348b084394435b1c4e39a"
 ```
 
@@ -179,10 +179,10 @@ curl "http://localhost:4000/api/v1/models?limit=3&offset=6&sort=-name" \
   ],
   "meta": {  
     "totalCount": 35,
-    "first": "http://localhost:4000/api/v1/models?limit=3&offset=0&sort=-name",
-    "prev": "http://localhost:4000/api/v1/models?limit=3&offset=3&sort=-name",
-    "next": "http://localhost:4000/api/v1/models?limit=3&offset=9&sort=-name",
-    "last": "http://localhost:4000/api/v1/models?limit=3&offset=33&sort=-name"
+    "first": "https://api.sharemy3d.com/v1/models?limit=3&offset=0&sort=-name",
+    "prev": "https://api.sharemy3d.com/v1/models?limit=3&offset=3&sort=-name",
+    "next": "https://api.sharemy3d.com/v1/models?limit=3&offset=9&sort=-name",
+    "last": "https://api.sharemy3d.com/v1/models?limit=3&offset=33&sort=-name"
   }
 }
 ```
@@ -191,7 +191,7 @@ This endpoint retrieves a list of all your models (or partially).
 
 ### HTTP Request
 
-`GET http://localhost:4000/api/v1/models`
+`GET https://api.sharemy3d.com/v1/models`
 
 ### Query parameters
 Parameter | Default | Description
@@ -204,7 +204,7 @@ sort | time | A comma-seperated list of sorting orders. Valid values are: <ul><l
 ## Delete a model
 
 ```shell
-curl "http://localhost:4000/api/v1/models/9e4d36b157df466da6dd9d32956561e1" \
+curl "https://api.sharemy3d.com/v1/models/9e4d36b157df466da6dd9d32956561e1" \
   -H "Authorization: 003b3c2c582348b084394435b1c4e39a" \
   -X DELETE
 ```
@@ -221,14 +221,14 @@ This endpoint deletes a model.
 
 ### HTTP Request
 
-`DELETE http://localhost:4000/api/v1/models/:modelId`
+`DELETE https://api.sharemy3d.com/v1/models/:modelId`
 
 <aside class="warning">After a successful request you will no longer be able to access or edit the model.</aside>
 
 ## Download original file
 
 ```shell
-curl "http://localhost:4000/api/v1/models/9e4d36b157df466da6dd9d32956561e1/original" \
+curl "https://api.sharemy3d.com/v1/models/9e4d36b157df466da6dd9d32956561e1/original" \
   -H "Authorization: 003b3c2c582348b084394435b1c4e39a"
 ```
 
@@ -245,14 +245,14 @@ This endpoint generates a time limited URL to download the original file.
 
 ### HTTP Request
 
-`GET http://localhost:4000/api/v1/models/:modelId/original`
+`GET https://api.sharemy3d.com/v1/models/:modelId/original`
 
 # Backgrounds
 
 ## Upload new background
 
 ```shell
-curl "http://localhost:4000/api/v1/backgrounds/upload" \
+curl "https://api.sharemy3d.com/v1/backgrounds/upload" \
   -H "Authorization: 003b3c2c582348b084394435b1c4e39a" \
   -H "Content-Type: application/json" \
   -X POST \
@@ -287,7 +287,7 @@ This endpoint creates a new background.
 
 ### HTTP Request
 
-`POST http://localhost:4000/api/v1/backgrounds/upload`
+`POST https://api.sharemy3d.com/v1/backgrounds/upload`
 
 ### Arguments
 
@@ -303,7 +303,7 @@ resumable | false | no | If the model file should be uploaded by chunks (enables
 ## Retrieve a background
 
 ```shell
-curl "http://localhost:4000/api/v1/backgrounds/9e4d36b157df466da6dd9d32956561e1/info" \
+curl "https://api.sharemy3d.com/v1/backgrounds/9e4d36b157df466da6dd9d32956561e1/info" \
   -H "Authorization: 003b3c2c582348b084394435b1c4e39a"
 ```
 
@@ -324,7 +324,7 @@ This endpoint retrieves information about a background.
 
 ### HTTP Request
 
-`GET http://localhost:4000/api/v1/models/:modelId/info`
+`GET https://api.sharemy3d.com/v1/models/:modelId/info`
 
 ### Attributes
 Attribute | Type | Description
@@ -338,7 +338,7 @@ timeCreated | timestamp | When the background was created (Unix timestamp).
 ## List all backgrounds
 
 ```shell
-curl "http://localhost:4000/api/v1/backgrounds?limit=3&offset=6&sort=-time" \
+curl "https://api.sharemy3d.com/v1/backgrounds?limit=3&offset=6&sort=-time" \
   -H "Authorization: 003b3c2c582348b084394435b1c4e39a"
 ```
 
@@ -360,10 +360,10 @@ curl "http://localhost:4000/api/v1/backgrounds?limit=3&offset=6&sort=-time" \
   ],
   "meta": {
     "totalCount": 8,
-    "first": "http://localhost:4000/api/v1/backgrounds?limit=3&offset=0&sort=-time",
-    "prev": "http://localhost:4000/api/v1/backgrounds?limit=3&offset=3&sort=-time",
+    "first": "https://api.sharemy3d.com/v1/backgrounds?limit=3&offset=0&sort=-time",
+    "prev": "https://api.sharemy3d.com/v1/backgrounds?limit=3&offset=3&sort=-time",
     "next": null,
-    "last": "http://localhost:4000/api/v1/backgrounds?limit=3&offset=6&sort=-time"
+    "last": "https://api.sharemy3d.com/v1/backgrounds?limit=3&offset=6&sort=-time"
   }
 }
 ```
@@ -372,7 +372,7 @@ This endpoint retrieves a list of all your background (or partially).
 
 ### HTTP Request
 
-`GET http://localhost:4000/api/v1/backgrounds`
+`GET https://api.sharemy3d.com/v1/backgrounds`
 
 ### Query parameters
 Parameter | Default | Description
@@ -385,7 +385,7 @@ sort | time | A comma-seperated list of sorting orders. Valid values are: <ul><l
 ## Delete a background
 
 ```shell
-curl "http://localhost:4000/api/v1/backgrounds/d652d493808049e283315d133c328d42" \
+curl "https://api.sharemy3d.com/v1/backgrounds/d652d493808049e283315d133c328d42" \
   -H "Authorization: 003b3c2c582348b084394435b1c4e39a" \
   -X DELETE
 ```
@@ -402,7 +402,7 @@ This endpoint deletes a background.
 
 ### HTTP Request
 
-`DELETE http://localhost:4000/api/v1/background/:backgroundId`
+`DELETE https://api.sharemy3d.com/v1/background/:backgroundId`
 
 <aside class="warning">After a successful request you will no longer be able to access or edit the background.</aside>
 <aside class="warning">Models that are using this background will lose its background.</aside>
