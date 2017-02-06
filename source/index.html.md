@@ -144,7 +144,7 @@ modelId | string | Unique model identifier.
 name | string | Model's name.
 description | string | Model's description.
 hasPassword | bool | If the model is password protected.
-hasPassword | bool | If the model is downloadable.
+downloadable | bool | If the model is downloadable.
 timeCreated | timestamp | When the model was created (Unix timestamp).
 status | string | One of <ul><li>UPLOADING</li><li>PROCESSING</li><li>ACTIVE</li><li>FAILED</li></ul>
 size | number | File size (in bytes) of the original file.
