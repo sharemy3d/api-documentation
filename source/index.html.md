@@ -21,7 +21,7 @@ ShareMy3D provides the Data API as a way to programmatically interact with your 
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "API_ENDPOINT_HERE"
-  -H "Authorization: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  -H "Authorization: Bearer 00xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
 > Make sure to replace `00xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx` with your API token.
@@ -31,7 +31,7 @@ Do not share your secret API keys in publicly accessible areas such GitHub, clie
 
 The Data API expects the API token to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+`Authorization: Bearer 00xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
 
 <aside class="notice">
 You must replace <code>00xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code> with your personal API token.
@@ -60,7 +60,7 @@ HTTP Status Code | Meaning
 
 ```shell
 curl "https://api.sharemy3d.com/v1/models/upload" \
-  -H "Authorization: 003b3c2c582348b084394435b1c4e39a" \
+  -H "Authorization: Bearer 003b3c2c582348b084394435b1c4e39a" \
   -H "Content-Type: application/json" \
   -X POST \
   -d '{
@@ -111,7 +111,7 @@ resumable | false | no | If the model file should be uploaded by chunks (enables
 
 ```shell
 curl "https://api.sharemy3d.com/v1/models/9e4d36b157df466da6dd9d32956561e1/info" \
-  -H "Authorization: 003b3c2c582348b084394435b1c4e39a"
+  -H "Authorization: Bearer 003b3c2c582348b084394435b1c4e39a"
 ```
 
 > The above command returns JSON structured like this:
@@ -154,7 +154,7 @@ numViews | number | Number of model views.
 
 ```shell
 curl "https://api.sharemy3d.com/v1/models?limit=3&offset=6&sort=-name" \
-  -H "Authorization: 003b3c2c582348b084394435b1c4e39a"
+  -H "Authorization: Bearer 003b3c2c582348b084394435b1c4e39a"
 ```
 
 > The above command returns JSON structured like this:
@@ -205,7 +205,7 @@ sort | time | A comma-seperated list of sorting orders. Valid values are: <ul><l
 
 ```shell
 curl "https://api.sharemy3d.com/v1/models/9e4d36b157df466da6dd9d32956561e1" \
-  -H "Authorization: 003b3c2c582348b084394435b1c4e39a" \
+  -H "Authorization: Bearer 003b3c2c582348b084394435b1c4e39a" \
   -X DELETE
 ```
 
@@ -229,7 +229,7 @@ This endpoint deletes a model.
 
 ```shell
 curl "https://api.sharemy3d.com/v1/models/9e4d36b157df466da6dd9d32956561e1/original" \
-  -H "Authorization: 003b3c2c582348b084394435b1c4e39a"
+  -H "Authorization: Bearer 003b3c2c582348b084394435b1c4e39a"
 ```
 
 > The above command returns JSON structured like this:
@@ -253,7 +253,7 @@ This endpoint generates a time limited URL to download the original file.
 
 ```shell
 curl "https://api.sharemy3d.com/v1/backgrounds/upload" \
-  -H "Authorization: 003b3c2c582348b084394435b1c4e39a" \
+  -H "Authorization: Bearer 003b3c2c582348b084394435b1c4e39a" \
   -H "Content-Type: application/json" \
   -X POST \
   -d '{
@@ -304,7 +304,7 @@ resumable | false | no | If the model file should be uploaded by chunks (enables
 
 ```shell
 curl "https://api.sharemy3d.com/v1/backgrounds/9e4d36b157df466da6dd9d32956561e1/info" \
-  -H "Authorization: 003b3c2c582348b084394435b1c4e39a"
+  -H "Authorization: Bearer 003b3c2c582348b084394435b1c4e39a"
 ```
 
 > The above command returns JSON structured like this:
@@ -339,7 +339,7 @@ timeCreated | timestamp | When the background was created (Unix timestamp).
 
 ```shell
 curl "https://api.sharemy3d.com/v1/backgrounds?limit=3&offset=6&sort=-time" \
-  -H "Authorization: 003b3c2c582348b084394435b1c4e39a"
+  -H "Authorization: Bearer 003b3c2c582348b084394435b1c4e39a"
 ```
 
 > The above command returns JSON structured like this:
@@ -386,7 +386,7 @@ sort | time | A comma-seperated list of sorting orders. Valid values are: <ul><l
 
 ```shell
 curl "https://api.sharemy3d.com/v1/backgrounds/d652d493808049e283315d133c328d42" \
-  -H "Authorization: 003b3c2c582348b084394435b1c4e39a" \
+  -H "Authorization: Bearer 003b3c2c582348b084394435b1c4e39a" \
   -X DELETE
 ```
 
